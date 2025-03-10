@@ -18,8 +18,10 @@ def list_departments():
 def find_department_by_name():
     name = input("Enter the department's name: ")
     department = Department.find_by_name(name)
-    print(department) if department else print(
-        f'Department {name} not found')
+     if department:
+        print(department) 
+    else: 
+        print(f'Department {name} not found')
 
 
 def find_department_by_id():
